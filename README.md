@@ -83,3 +83,11 @@ quart run --reload
 3. **Descarga las conversaciones**: Guarda las interacciones para referencia futura.
 
 ¡Disfruta usando Briefly y acelera tu procesamiento de documentos con inteligencia artificial!
+
+## **Autor**
+
+Desarrollado por Irvin Benitez.
+
+Puedes contactarme en [irvin.benitezs.26@gmail.com] para cualquier consulta o sugerencia.
+
+Visita mi perfil de GitHub: [IrvinngB](https://github.com/IrvinngB)

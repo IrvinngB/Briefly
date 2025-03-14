@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Briefly PDF Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="sidebar">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-robot"></i>
+                </div>
+                <h1>Briefly</h1>
+            </div>
+            <div class="upload-container">
+                <h2><i class="fas fa-file-pdf"></i> Cargar documento</h2>
+                <form id="upload-form" enctype="multipart/form-data">
+                    <div class="file-input-wrapper">
+                        <input type="file" id="pdf-file" name="files" accept=".pdf" />
+                        <label for="pdf-file" class="file-input-label">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <span>Seleccionar PDF</span>
+                        </label>
+                        <div id="file-name-container">
+                            <span id="file-name">Ningún archivo seleccionado</span>
+                        </div>
+                    </div>
+                    <button type="submit" id="upload-button">
+                        <i class="fas fa-upload"></i> Cargar PDF
+                    </button>
+                </form>
+            </div>
+            
+            <div class="session-info" id="session-info">
+                <h2><i class="fas fa-info-circle"></i> Información</h2>
+                <div class="info-item">
+                    <span class="info-label">Documento:</span>
+                    <span class="info-value" id="doc-name">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Páginas:</span>
+                    <span class="info-value" id="total-pages">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bloques:</span>
+                    <span class="info-value" id="total-blocks">-</span>
+                </div>
+                <div class="info-item">
+                    <span class="info-label">Bloque actual:</span>
+                    <span class="info-value" id="current-block">-</span>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-label">Progreso:</div>
+                    <div class="progress-bar-container">
+                        <div class="progress-bar" id="progress-bar"></div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="action-buttons">
+                <button id="download-chat" class="action-button">
+                    <i class="fas fa-download"></i> Descargar conversación
+                </button>
+                <button id="clear-chat" class="action-button">
+                    <i class="fas fa-trash-alt"></i> Limpiar chat
+                </button>
+            </div>
+            
+            <div class="theme-toggle">
+                <span>Modo oscuro</span>
+                <label class="switch">
+                    <input type="checkbox" id="theme-switch">
+                    <span class="slider round"></span>
+                </label>
+            </div>
+        </div>
+        
+        <div class="main-content">
+            <header class="main-header">
+                <h1>Briefly PDF Assistant</h1>
+                <p>Carga un PDF y haz preguntas sobre su contenido</p>
+            </header>
+            
+            <div class="chat-container">
+                <div class="chat-messages" id="chat-messages">
+                    <!-- Los mensajes se añadirán dinámicamente aquí -->
+                </div>
+                
+                <div class="chat-input-container">
+                    <div class="input-wrapper">
+                        <input type="text" id="query-input" placeholder="Escribe tu pregunta o 'siguiente bloque' para continuar..." />
+                        <button id="clear-input" class="clear-button">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <button id="send-button">
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="spinner">
+            <div class="bounce1"></div>
+            <div class="bounce2"></div>
+            <div class="bounce3"></div>
+        </div>
+        <p>Procesando PDF...</p>
+    </div>
+    
+    <div class="toast" id="toast"></div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
+

@@ -2,7 +2,7 @@
 
 **Briefly** es una aplicación web innovadora que permite a los usuarios cargar documentos PDF, obtener resúmenes automáticos por bloques y realizar consultas específicas sobre el contenido del documento utilizando inteligencia artificial (IA). Es perfecta para estudiar, investigar o procesar rápidamente documentos largos.
 
-![Briefly](https://via.placeholder.com/800x400?text=Briefly)
+![Briefly](https://photos.onedrive.com/share/02360132F2A37C03!2727?cid=02360132F2A37C03&resId=02360132F2A37C03!2727&authkey=!AFvYGc1sag-IvgI&ithint=photo&e=u05GNf)
 
 ## **Características**
 

@@ -741,6 +741,109 @@ input:checked + .slider:before {
   font-size: 12px;
 }
 
+/* Estilos para los comandos rápidos en la parte inferior */
+.comandos-rapidos {
+  margin-top: 20px;
+}
+
+/* Estilos para el título de comandos rápidos */
+.comandos-rapidos-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
+/* Estilos para los botones de comando */
+.comando-button {
+  display: inline-flex;
+  align-items: center;
+  padding: 6px 12px;
+  margin: 0 6px 6px 0;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.comando-button:hover {
+  background-color: var(--primary-light);
+  color: white;
+  transform: translateY(-2px);
+}
+
+.comando-button:active {
+  transform: translateY(0);
+}
+
+/* Estilos para el bloque de información */
+.bloque-info {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para los bloques de texto en el chat */
+.bloque-texto {
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 16px;
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Estilos para los comandos rápidos en la parte inferior */
+#comandos-rapidos {
+  margin-top: 20px;
+  padding: 10px 0;
+  border-top: 1px solid var(--border-color);
+}
+
+/* Estilos para los botones de comando específicos */
+button[id^="bloque-"], button[id^="pagina-"], button[id="obtener-resumen"], button[id="siguiente-bloque"] {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 12px;
+  margin: 0 6px 6px 0;
+  background-color: var(--secondary-color);
+  border: 1px solid var(--border-color);
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+button[id^="bloque-"]:hover, button[id^="pagina-"]:hover, button[id="obtener-resumen"]:hover, button[id="siguiente-bloque"]:hover {
+  background-color: var(--primary-light);
+  color: white;
+  transform: translateY(-2px);
+}
+
+button[id^="bloque-"]:active, button[id^="pagina-"]:active, button[id="obtener-resumen"]:active, button[id="siguiente-bloque"]:active {
+  transform: translateY(0);
+}
+
+/* Estilos para los comandos rápidos */
+.comandos-rapidos {
+  margin-top: 20px;
+}
+
+.comandos-rapidos-title {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text-light);
+  margin-bottom: 10px;
+}
+
 /* Animaciones */
 @keyframes fadeIn {
   from { opacity: 0; transform: translateY(10px); }
@@ -769,3 +872,23 @@ input:checked + .slider:before {
     font-size: 14px;
   }
 }
+
+.system-message {
+  background-color: var(--secondary-color);
+  color: var(--button-primary);
+  padding: 10px 15px;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  font-size: 14px;
+  font-weight: 500;
+  box-shadow: 0 2px 5px var(--shadow-color);
+  text-align: center;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark .system-message {
+  background-color: var(--sidebar-bg);
+  color: var(--text-light);
+  text-align: center;
+}
+

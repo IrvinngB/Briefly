@@ -607,7 +607,7 @@ document.addEventListener("DOMContentLoaded", () => {
     showToast("Preparando la descarga...", "info")
 
     // Crear contenido del archivo
-    let content = "# Conversación con R-AI PDF Assistant\n"
+    let content = "# Conversación con Briefly PDF Assistant\n"
     content += `Fecha: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}\n\n`
 
     if (currentSessionId && docNameElement.textContent !== "-") {
@@ -627,7 +627,7 @@ document.addEventListener("DOMContentLoaded", () => {
           sender = "Usuario"
           break
         case "bot":
-          sender = "R-AI"
+          sender = "Briefly"
           break
         case "system":
           sender = "Sistema"
@@ -644,7 +644,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Generar nombre de archivo con fecha y hora
     const date = new Date()
-    const fileName = `R-AI_Conversacion_${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}_${date.getHours().toString().padStart(2, "0")}-${date.getMinutes().toString().padStart(2, "0")}.txt`
+    const fileName = `Briefly_Conversacion_${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}_${date.getHours().toString().padStart(2, "0")}-${date.getMinutes().toString().padStart(2, "0")}.txt`
 
     a.href = url
     a.download = fileName
@@ -663,7 +663,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // Añadir esta nueva función para descargar en el cliente
   function downloadConversationClient() {
     // Crear contenido del archivo
-    let content = "# Conversación con R-AI PDF Assistant\n"
+    let content = "# Conversación con Briefly PDF Assistant\n"
     content += `Fecha: ${new Date().toLocaleDateString()} ${new Date().toLocaleTimeString()}\n\n`
 
     if (currentSessionId && docNameElement.textContent !== "-") {
@@ -683,7 +683,7 @@ document.addEventListener("DOMContentLoaded", () => {
           sender = "Usuario"
           break
         case "bot":
-          sender = "R-AI"
+          sender = "Briefly"
           break
         case "system":
           sender = "Sistema"
@@ -700,7 +700,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Generar nombre de archivo con fecha y hora
     const date = new Date()
-    const fileName = `R-AI_Conversacion_${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}_${date.getHours().toString().padStart(2, "0")}-${date.getMinutes().toString().padStart(2, "0")}.txt`
+    const fileName = `Briefly_Conversacion_${date.getFullYear()}-${(date.getMonth() + 1).toString().padStart(2, "0")}-${date.getDate().toString().padStart(2, "0")}_${date.getHours().toString().padStart(2, "0")}-${date.getMinutes().toString().padStart(2, "0")}.txt`
 
     a.href = url
     a.download = fileName
@@ -730,7 +730,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Añadir mensaje de bienvenida
       const welcomeMessage =
-        "¡Hola! Soy R-AI, un asistente para analizar documentos PDF. Para comenzar, carga un PDF y podré ayudarte a extraer información, resumir su contenido y responder preguntas sobre él."
+        "¡Hola! Soy Briefly, un asistente para analizar documentos PDF. Para comenzar, carga un PDF y podré ayudarte a extraer información, resumir su contenido y responder preguntas sobre él."
       addBotMessage(welcomeMessage)
       saveToHistory("bot", welcomeMessage)
 
@@ -902,12 +902,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Mensaje inicial
   addBotMessage(
-    "¡Hola! Soy R-AI, un asistente para analizar documentos PDF. Para comenzar, carga un PDF y podré ayudarte a extraer información, resumir su contenido y responder preguntas sobre él.",
+    "¡Hola! Soy Briefly, un asistente para analizar documentos PDF. Para comenzar, carga un PDF y podré ayudarte a extraer información, resumir su contenido y responder preguntas sobre él.",
     true, // Usar animación de tipeo
   )
   saveToHistory(
     "bot",
-    "¡Hola! Soy R-AI, un asistente para analizar documentos PDF. Para comenzar, carga un PDF y podré ayudarte a extraer información, resumir su contenido y responder preguntas sobre él.",
+    "¡Hola! Soy Briefly, un asistente para analizar documentos PDF. Para comenzar, carga un PDF y podré ayudarte a extraer información, resumir su contenido y responder preguntas sobre él.",
   )
 
   // Añadir animación al botón de enviar

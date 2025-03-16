@@ -734,7 +734,11 @@ async def startup():
 
 if __name__ == '__main__':
     port = int(os.getenv('PORT', 3000))
-    print(f"Servidor iniciado en http://localhost:{port}")
+    print(f"Servidor iniciado en http://0.0.0.0:{port}")
     print("Procesamiento de PDF con imágenes habilitado")
-    app.run(debug=True, host='0.0.0.0', port=port)
+    import hypercorn.asyncio
+    config = hypercorn.Config()
+    config.bind = [f"0.0.0.0:{port}"]
+    config.debug = True
+    asyncio.run(hypercorn.asyncio.serve(app, config))
 
